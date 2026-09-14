@@ -1,0 +1,2787 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Javanese+Text&display=swap');
+
+:root {
+    --purple: #a677b4;
+    --purple-dark: #70348a;
+    --purple-light: #e5cdec;
+    --pink: #f4dfe5;
+    --cream: #fbf7f3;
+    --black: #100f0f;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: "Javanese Text", Georgia, serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header {
+    min-height: 80px;
+    padding: 10px 3.2%;
+    background: #fffaf7;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    border-bottom: 1px solid #eee4e0;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    min-width: 215px;
+}
+
+.logo-mark,
+.footer-mark {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: auto;
+}
+
+.logo-mark img,
+.footer-mark img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text strong {
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.logo-text small {
+    font-size: 7px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.main-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 2vw, 30px);
+}
+
+.main-nav a {
+    font-size: 10px;
+    letter-spacing: .4px;
+    transition: opacity .2s;
+}
+
+.main-nav a:hover {
+    opacity: .65;
+}
+
+.premium-btn {
+    background: var(--purple);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    transition: color .2s;
+}
+
+.icon-btn:hover {
+    color: var(--purple);
+}
+
+.icon-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    display: block;
+}
+
+.bag {
+    position: relative;
+}
+
+.bag b {
+    position: absolute;
+    font-size: 10px;
+    font-style: normal;
+    right: -7px;
+    top: -6px;
+    color: var(--purple-dark);
+    background: var(--cream);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* HERO */
+.hero {
+    min-height: 390px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #d9b2df;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("img/hero.png");
+    background-size: cover;
+    background-position: left center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-left: 53%;
+    padding: 35px 4% 35px 0;
+    max-width: 650px;
+    color: var(--white);
+}
+
+.eyebrow {
+    display: none;
+}
+
+.hero h1 {
+    font-family: "Times New Roman", serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: .95;
+    margin-bottom: 22px;
+}
+
+.hero-copy {
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.55;
+    margin-bottom: 20px;
+    color: #100f0f;
+}
+
+.hero-buttons,
+.promo .btn {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 115px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 11px;
+    transition: .2s;
+}
+
+.btn-primary,
+.promo-btn {
+    background: var(--purple);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.65);
+    color: white;
+}
+
+/* VIP */
+.vip-section {
+    padding: 42px 8%;
+    position: relative;
+}
+
+.vip-section::before,
+.vip-section::after {
+    content: "";
+    position: absolute;
+    background-image: url("img/flower-decor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .9;
+}
+
+.vip-section::before {
+    width: 90px;
+    height: 70px;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vip-section::after {
+    width: 150px;
+    height: 116px;
+    right: 3%;
+    top: 30px;
+}
+
+.vip-card {
+    max-width: 670px;
+    margin: auto;
+    padding: 34px 45px;
+    text-align: left;
+    background: var(--purple-light);
+    border-radius: 13px;
+}
+
+.vip-card h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 31px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.vip-card p {
+    font-size: 12px;
+    margin-bottom: 26px;
+}
+
+.btn-vip {
+    background: var(--purple);
+    color: white;
+    display: block;
+    width: 95px;
+    margin: auto;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* GENERAL */
+.section {
+    padding: 30px 7%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-label {
+    color: var(--purple-dark);
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.section-subtitle {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.sparkle {
+    color: var(--purple);
+    font-size: 25px;
+}
+
+/* PRODUCTS */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid var(--purple);
+    border-radius: 12px;
+    padding: 10px 8px 9px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 145px;
+    background: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-card h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 7px 0 8px;
+}
+
+.product-btn {
+    display: block;
+    background: var(--purple);
+    color: white;
+    border-radius: 6px;
+    padding: 8px 4px;
+    font-size: 9px;
+}
+
+/* STORY */
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 240px;
+    background: linear-gradient(100deg, #f3d9df, #c8a4d5);
+}
+
+.story-content {
+    padding: 48px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-content .section-label {
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 15px;
+}
+
+.story-content h2 {
+    color: var(--purple-dark);
+    font-family: "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 4px 0 12px;
+}
+
+.story-content > p:last-child {
+    max-width: 570px;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+.story-art {
+    background: url("img/about.png") right center / cover no-repeat;
+    mix-blend-mode: multiply;
+    opacity: .8;
+}
+
+/* WHY */
+.why-choose {
+    min-height: 390px;
+    background: url("img/why.png") center / cover no-repeat;
+    position: relative;
+}
+
+.why-overlay {
+    min-height: 390px;
+    padding: 38px 7%;
+    background: rgba(221, 191, 235, .42);
+}
+
+.light-heading {
+    color: var(--purple-dark);
+}
+
+.light-heading .section-label {
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.line {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--purple-dark);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: #9c6b21;
+    margin-bottom: 8px;
+}
+
+.feature h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.feature p {
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding-top: 70px;
+    padding-bottom: 45px;
+}
+
+.testimonials .section-heading {
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.testimonials .section-label {
+    font-size: 19px;
+    letter-spacing: 4px;
+}
+
+.purple-line {
+    background: var(--purple);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.testimonial {
+    background: #b998c9;
+    border-radius: 14px;
+    padding: 12px 15px 16px;
+    font-size: 11px;
+}
+
+.testimonial-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.testimonial-avatar {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--purple);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+.stars {
+    color: #f4d44d;
+    letter-spacing: 1px;
+}
+
+.testimonial strong {
+    display: block;
+    font-family: "Times New Roman", serif;
+}
+
+/* PROMO */
+.promo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+.promo-card {
+    min-height: 210px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-shop {
+    background-image: url("img/shop.png");
+}
+
+.promo-vip {
+    background-image: url("img/vip.png");
+}
+
+.promo-overlay {
+    height: 100%;
+    min-height: 210px;
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(91,45,108,.45), transparent);
+    color: white;
+}
+
+.promo-vip .promo-overlay {
+    color: var(--purple-dark);
+    background: linear-gradient(90deg, rgba(255,239,242,.72), transparent);
+}
+
+.promo-overlay h2 {
+    max-width: 330px;
+    font-family: "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.promo-overlay p {
+    max-width: 330px;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.promo-btn {
+    min-width: 125px;
+}
+
+/* FOOTER */
+.footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr 1.5fr;
+    gap: 35px;
+    padding: 38px 7% 60px;
+    background: var(--cream);
+    border-top: 1px solid #e8ded9;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-mark {
+    height: 48px;
+    width: auto;
+    margin-bottom: 6px;
+}
+
+.footer-brand > strong {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+}
+
+.footer-brand > small {
+    font-size: 7px;
+}
+
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.socials span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--black);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-column h3 {
+    color: var(--purple-dark);
+    font-family: "Times New Roman", serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 10px;
+}
+
+.fake-input {
+    font-size: 10px;
+}
+
+.newsletter p {
+    max-width: 190px;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    max-width: 220px;
+    border: 1px solid var(--purple);
+    border-radius: 22px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 9px 0 9px 14px;
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 10px;
+    color: var(--black);
+}
+
+.newsletter-input::placeholder {
+    color: #9b8b95;
+}
+
+.newsletter-btn {
+    border: none;
+    background: var(--purple);
+    color: white;
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 9px;
+    letter-spacing: .4px;
+    padding: 9px 14px;
+    cursor: pointer;
+    transition: background .2s;
+    white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+    background: var(--purple-dark);
+}
+
+.copyright {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--purple-dark);
+    font-size: 8px;
+}
+
+/* AUTH AREA (header) */
+.auth-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-sm {
+    min-width: 0;
+    padding: 6px 14px;
+    font-size: 10px;
+    border-radius: 16px;
+}
+
+.btn-outline-purple {
+    background: transparent;
+    color: var(--purple-dark);
+    border: 1px solid var(--purple);
+}
+
+.btn-outline-purple:hover {
+    background: var(--purple-light);
+}
+
+.user-greeting {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--purple-dark);
+    white-space: nowrap;
+}
+
+.newsletter-msg {
+    margin-top: 8px;
+    font-size: 10px;
+    min-height: 12px;
+}
+
+/* MODALS (login / register) */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 15, 15, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+    z-index: 200;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    position: relative;
+    background: var(--white);
+    border-radius: 13px;
+    padding: 32px;
+    max-width: 380px;
+    width: 100%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.modal h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--purple-dark);
+    margin-bottom: 6px;
+}
+
+.modal p {
+    font-size: 11px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.modal label {
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.modal input {
+    border: 1px solid var(--purple-light);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 12px;
+    background: var(--cream);
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: var(--purple);
+}
+
+.btn-block {
+    display: flex;
+    width: 100%;
+}
+
+.modal-success {
+    color: #3a7d44;
+    font-weight: 600;
+    margin-top: 14px;
+    font-size: 11px;
+}
+
+.modal-error {
+    color: #c0392b;
+    font-weight: 600;
+    margin-top: 14px;
+    font-size: 11px;
+}
+
+.modal-switch {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 16px;
+}
+
+.modal-switch a {
+    color: var(--purple-dark);
+    font-weight: 600;
+}
+
+/* PAGE HERO (banner used on inner pages like Admin) */
+.page-hero {
+    padding: 40px 8% 32px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--purple-light), var(--pink));
+}
+
+.page-hero h1 {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--purple-dark);
+    margin-bottom: 8px;
+}
+
+.page-hero .breadcrumb {
+    font-size: 11px;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ADMIN DASHBOARD */
+.admin-stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.admin-product-card {
+    background: #fff;
+    border: 1px solid var(--purple);
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+
+.admin-product-card h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--purple-dark);
+}
+
+.admin-size-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-size-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.admin-size-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.admin-size-toggle input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--purple);
+}
+
+.admin-qty-input {
+    width: 56px;
+    border: 1px solid var(--purple-light);
+    border-radius: 6px;
+    padding: 5px 6px;
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 11px;
+    background: var(--cream);
+}
+
+.admin-empty-note {
+    font-size: 10px;
+    color: #9b8b95;
+}
+
+/* STANDALONE AUTH PAGE (admin login) */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+.auth-page-wrap {
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.auth-card {
+    background: #fff;
+    border: 1px solid var(--purple-light);
+    border-radius: 13px;
+    padding: 34px 30px;
+}
+
+.auth-card h1 {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--purple-dark);
+    margin-bottom: 6px;
+}
+
+.auth-card-sub {
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.auth-card label {
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.auth-card input {
+    border: 1px solid var(--purple-light);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 12px;
+    background: var(--cream);
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: var(--purple);
+}
+
+.main-nav a.active {
+    color: var(--purple-dark);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: var(--purple);
+}
+
+/* CONTACT PAGE */
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.contact-form-card,
+.contact-info-card {
+    background: #fff;
+    border: 1px solid var(--purple-light);
+    border-radius: 13px;
+    padding: 30px;
+}
+
+.contact-form-card h2,
+.contact-info-card h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--purple-dark);
+    margin-bottom: 6px;
+}
+
+.contact-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.contact-form-card label {
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+    border: 1px solid var(--purple-light);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: "Javanese Text", Georgia, serif;
+    font-size: 12px;
+    background: var(--cream);
+    resize: vertical;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+    outline: none;
+    border-color: var(--purple);
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-list .label {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: var(--purple-dark);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.contact-list li span:last-child {
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .contact-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SHOP FILTERS */
+.shop-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.shop-filters a {
+    font-size: 10px;
+    letter-spacing: .4px;
+    padding: 8px 18px;
+    border: 1px solid var(--purple);
+    border-radius: 20px;
+    color: var(--purple-dark);
+    transition: .2s;
+}
+
+.shop-filters a.active,
+.shop-filters a:hover {
+    background: var(--purple);
+    color: white;
+}
+
+/* PRODUCT META (price / available sizes) */
+.product-price {
+    font-family: "Times New Roman", serif;
+    font-size: 13px;
+    color: var(--purple-dark);
+    margin-bottom: 4px;
+}
+
+.product-sizes {
+    font-size: 9px;
+    color: #7a6b74;
+    margin-bottom: 8px;
+}
+
+/* BESTSELLER RANK BADGE */
+.product-card.ranked {
+    position: relative;
+}
+
+.rank-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--purple);
+    color: white;
+    font-family: "Times New Roman", serif;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* OUT OF STOCK */
+.out-of-stock-badge {
+    display: inline-block;
+    background: #fbe4e1;
+    color: #c0392b;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+}
+
+.product-card.out-of-stock .product-image {
+    opacity: .55;
+    filter: grayscale(35%);
+}
+
+.product-btn.disabled {
+    background: #ddd2d8;
+    color: #8a7c85;
+    pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        order: 3;
+        flex-basis: 100%;
+        padding: 8px 0;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .hero-content {
+        margin-left: 45%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 620px) {
+    .brand-logo {
+        min-width: auto;
+    }
+
+    .header-icons {
+        margin-left: auto;
+    }
+
+    .hero {
+        min-height: 510px;
+        align-items: flex-end;
+    }
+
+    .hero-image {
+        background-position: 30% center;
+    }
+
+    .hero-content {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 45px 25px 35px;
+        background: linear-gradient(transparent, rgba(93,45,110,.75));
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-copy {
+        font-size: 14px;
+    }
+
+    .vip-card {
+        padding: 28px 24px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+    }
+
+    .story-art {
+        min-height: 180px;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+        margin-top: 35px;
+    }
+
+    .promo,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .newsletter {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 420px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features,
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        grid-column: auto;
+    }
+
+    .main-nav {
+        gap: 15px;
+    }
+
+    .main-nav a {
+        font-size: 9px;
+    }
+}
+/* =========================================================
+   REBUILT LOGIN / CART / CHECKOUT / ADMIN FLOW
+   ========================================================= */
+html.auth-pending body { visibility: hidden; }
+
+.auth-area { display:flex; align-items:center; gap:10px; white-space:nowrap; }
+.user-greeting { font-size:11px; }
+.auth-divider { opacity:.35; }
+.header-logout { border:0; background:transparent; font:inherit; font-size:11px; color:var(--purple-dark); cursor:pointer; padding:5px 0; }
+.header-logout:hover { text-decoration:underline; }
+.icon-btn.bag { position:relative; gap:4px; min-width:38px; justify-content:center; }
+.icon-btn.bag b { min-width:18px; height:18px; padding:0 4px; border-radius:99px; display:inline-flex; align-items:center; justify-content:center; background:var(--purple); color:#fff; font:700 10px/1 Arial,sans-serif; }
+.icon-btn.bag span { font-size:10px; }
+.variant-select { width:100%; padding:9px 10px; border:1px solid #dfd1e4; background:white; border-radius:8px; margin:8px 0 10px; font:inherit; font-size:11px; color:#4d4051; }
+.product-btn { border:0; cursor:pointer; width:100%; }
+.product-btn:disabled,.product-btn.disabled { cursor:not-allowed; opacity:.55; }
+
+/* Login / Register */
+.auth-page-tio { min-height:100vh; background:linear-gradient(135deg,#faf4fb 0%,#fff 55%,#f4e5f7 100%); }
+.auth-shell { min-height:100vh; display:grid; grid-template-columns:1.05fr .95fr; }
+.auth-brand-panel { background:linear-gradient(145deg,#5d2d6e,#a677b4); color:#fff; padding:70px clamp(35px,7vw,110px); display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; }
+.auth-brand-panel::after { content:""; position:absolute; width:420px; height:420px; border:1px solid rgba(255,255,255,.18); border-radius:50%; right:-180px; bottom:-170px; box-shadow:0 0 0 55px rgba(255,255,255,.04),0 0 0 110px rgba(255,255,255,.035); }
+.auth-logo-large { width:min(360px,80%); height:auto; filter:brightness(0) invert(1); opacity:.96; margin-bottom:42px; }
+.auth-kicker { letter-spacing:3px; font-size:11px; font-family:Arial,sans-serif; margin-bottom:12px; opacity:.8; }
+.auth-brand-panel h1 { font-family:"Cormorant Garamond",Georgia,serif; font-size:clamp(44px,5vw,76px); line-height:.95; font-weight:500; max-width:560px; }
+.auth-brand-panel > p:last-child { max-width:520px; margin-top:22px; font-size:15px; opacity:.85; }
+.auth-form-panel { display:flex; align-items:center; justify-content:center; padding:45px 25px; background:#fffdfc; }
+.auth-card { width:min(460px,100%); background:#fff; border:1px solid #eadfeb; border-radius:18px; padding:36px; box-shadow:0 24px 70px rgba(87,48,98,.10); }
+.auth-card-wide { width:min(500px,100%); }
+.auth-logo-small { display:block; width:190px; max-height:70px; object-fit:contain; margin:0 auto 20px; }
+.auth-card h1,.auth-card h2 { color:var(--purple-dark); font-family:"Cormorant Garamond",Georgia,serif; font-size:34px; margin-bottom:4px; }
+.auth-card-sub { color:#756879; font-size:13px; margin-bottom:22px; }
+.auth-card form { display:grid; gap:14px; }
+.auth-card label,.checkout-card label { display:grid; gap:6px; font-size:12px; font-weight:600; color:#3e3441; }
+.auth-card input,.auth-card select,.auth-card textarea,.checkout-card input,.checkout-card textarea,.checkout-card select { width:100%; border:1px solid #dfd3e2; border-radius:10px; padding:12px 13px; background:#fff; font:inherit; color:#241d26; outline:none; }
+.auth-card input:focus,.checkout-card input:focus,.checkout-card textarea:focus { border-color:var(--purple); box-shadow:0 0 0 3px rgba(166,119,180,.12); }
+.auth-bottom-text { text-align:center; font-size:12px; margin-top:18px; color:#6b5d70; }
+.auth-bottom-text a { color:var(--purple-dark); font-weight:700; }
+.auth-page-wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:30px; }
+.btn-block { width:100%; text-align:center; }
+.modal-error,.modal-success { padding:10px 12px; border-radius:9px; margin:10px 0 14px; font-size:12px; }
+.modal-error { background:#fff0f1; color:#a02937; border:1px solid #f0c7cc; }
+.modal-success { background:#f0fbf4; color:#27633c; border:1px solid #c7e7d1; }
+
+/* Cart */
+.loading-note { text-align:center; padding:36px; color:#756879; }
+.cart-layout,.checkout-layout { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(280px,.8fr); gap:28px; align-items:start; }
+.cart-items { display:grid; gap:14px; }
+.cart-row { background:#fff; border:1px solid #eadfeb; border-radius:14px; display:grid; grid-template-columns:105px 1fr auto auto; align-items:center; gap:18px; padding:16px; }
+.cart-row img { width:105px; height:105px; object-fit:contain; border-radius:10px; background:#faf6fb; }
+.cart-item-info h3 { color:var(--purple-dark); font-size:18px; }
+.cart-item-info p { color:#776c79; font-size:11px; }
+.qty-control { display:flex; align-items:center; gap:5px; margin-top:8px; }
+.qty-control button { width:30px; height:30px; border:1px solid #dfd3e2; background:white; border-radius:6px; cursor:pointer; }
+.qty-control input { width:52px; height:30px; text-align:center; border:1px solid #dfd3e2; border-radius:6px; }
+.remove-cart { background:none; border:0; color:#a34b5e; cursor:pointer; font-size:11px; }
+.cart-summary { background:#fff; border:1px solid #eadfeb; border-radius:14px; padding:22px; position:sticky; top:18px; }
+.cart-summary h2 { color:var(--purple-dark); margin-bottom:18px; }
+.summary-line { display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px solid #f0e9f2; font-size:12px; }
+.summary-line.total { font-size:15px; border-bottom:0; padding:16px 0 20px; }
+.continue-link { display:block; text-align:center; margin-top:12px; color:var(--purple-dark); font-size:11px; }
+.empty-state { background:#fff; border:1px dashed #d9c7df; border-radius:14px; text-align:center; padding:55px 24px; }
+.empty-state h2 { color:var(--purple-dark); margin-bottom:8px; }
+.empty-state p { color:#746b76; margin-bottom:20px; font-size:12px; }
+
+/* Checkout */
+.checkout-main { display:grid; gap:20px; }
+.checkout-card { background:#fff; border:1px solid #eadfeb; border-radius:14px; padding:25px; display:grid; gap:14px; }
+.checkout-card h2 { color:var(--purple-dark); font-size:25px; }
+.checkout-intro { color:#776c79; font-size:12px; margin-top:-8px; }
+.payment-options { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.payment-option { border:1px solid #e3d6e5; border-radius:12px; padding:16px; display:flex!important; grid-template-columns:auto 1fr!important; align-items:flex-start; gap:10px!important; cursor:pointer; background:#fff; }
+.payment-option.selected { border-color:var(--purple); box-shadow:0 0 0 2px rgba(166,119,180,.12); }
+.payment-option input { width:auto; margin-top:3px; }
+.payment-option span { display:grid; gap:5px; }
+.payment-option strong { color:var(--purple-dark); font-size:15px; }
+.payment-option small { font-weight:400; color:#776c79; line-height:1.45; }
+.payment-details { background:#fbf7fc; border:1px solid #eadfeb; border-radius:12px; padding:16px; }
+.payment-details[hidden] { display:none; }
+.checkout-mini { display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #f0e9f2; font-size:11px; }
+.checkout-mini span { display:grid; }
+.checkout-mini small { color:#817484; }
+.checkout-summary { position:sticky; top:18px; }
+
+/* Orders */
+.orders-wrap { display:grid; gap:16px; max-width:1050px; margin:0 auto; }
+.order-card { background:#fff; border:1px solid #eadfeb; border-radius:14px; padding:20px; }
+.order-card-head,.order-total,.order-line { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+.order-card-head { padding-bottom:12px; border-bottom:1px solid #f0e9f2; margin-bottom:8px; }
+.order-card-head > div:first-child { display:grid; }
+.order-number { color:var(--purple-dark); font-weight:700; }
+.order-card small { color:#817484; font-size:10px; }
+.order-badges { display:flex; gap:7px; }
+.order-badges span { background:#f3e8f6; color:#6e3f7c; border-radius:99px; padding:5px 9px; font:700 9px Arial,sans-serif; text-transform:uppercase; }
+.order-line { padding:9px 0; font-size:11px; }
+.order-total { border-top:1px solid #f0e9f2; padding-top:12px; margin-top:7px; color:#4d4051; font-size:12px; }
+
+/* Admin */
+.admin-dashboard-body { background:#f7f3f8; font-family:Arial,sans-serif; }
+.admin-topbar { background:#fff; border-bottom:1px solid #e9ddeb; min-height:76px; padding:10px 4%; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:30; }
+.admin-brand { display:flex; align-items:center; gap:16px; font-size:14px; font-weight:700; color:var(--purple-dark); }
+.admin-brand img { width:185px; height:54px; object-fit:contain; }
+.admin-user { display:flex; align-items:center; gap:12px; font-size:12px; }
+.admin-main { width:min(1450px,94%); margin:0 auto; padding:34px 0 70px; }
+.admin-welcome { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:22px; }
+.admin-welcome h1 { color:#402449; font:600 40px/1 "Cormorant Garamond",Georgia,serif; }
+.admin-welcome p:not(.section-label) { color:#726676; font-size:12px; margin-top:6px; }
+.admin-stats { display:grid; grid-template-columns:repeat(7,minmax(120px,1fr)); gap:12px; margin-bottom:24px; }
+.stat-card { background:#fff; border:1px solid #e8ddea; border-radius:13px; padding:18px; min-height:105px; display:flex; flex-direction:column; justify-content:space-between; }
+.stat-card span { color:#7a6e7d; font-size:11px; }
+.stat-card strong { color:var(--purple-dark); font-size:23px; line-height:1.05; }
+.admin-panel { background:#fff; border:1px solid #e8ddea; border-radius:16px; padding:22px; margin-bottom:22px; box-shadow:0 8px 30px rgba(78,45,88,.04); }
+.admin-panel-head { display:flex; justify-content:space-between; align-items:flex-end; gap:14px; margin-bottom:16px; }
+.admin-panel h2 { color:#4f2b5c; font-family:"Cormorant Garamond",Georgia,serif; font-size:28px; }
+.table-wrap { overflow:auto; }
+.admin-table { width:100%; border-collapse:collapse; min-width:1050px; font-size:11px; }
+.admin-table th { text-align:left; color:#796b7d; padding:10px; border-bottom:1px solid #e8ddea; text-transform:uppercase; font-size:9px; letter-spacing:.5px; }
+.admin-table td { padding:12px 10px; border-bottom:1px solid #f0e9f2; vertical-align:middle; }
+.admin-table td small { display:block; color:#8a7d8d; margin-top:3px; }
+.admin-table select { border:1px solid #ded1e2; border-radius:7px; padding:7px; background:#fff; font-size:10px; }
+.mini-action { border:1px solid #cdb5d5; background:#fff; color:#6e3d7c; border-radius:7px; padding:7px 10px; cursor:pointer; font-size:10px; }
+.mini-action:hover { background:#f6eef8; }
+.mini-action.danger { border-color:#edc6cd; color:#a13f50; }
+.admin-product-list { display:grid; gap:14px; }
+.admin-product-item { border:1px solid #eadfeb; border-radius:12px; padding:15px; }
+.admin-product-main { display:grid; grid-template-columns:78px 1fr auto; align-items:center; gap:14px; }
+.admin-product-main img { width:78px; height:78px; object-fit:contain; background:#faf6fb; border-radius:10px; }
+.admin-product-main h3 { color:#4f2b5c; font-size:16px; }
+.admin-product-main p,.admin-product-main small { color:#7c707f; font-size:10px; }
+.admin-product-actions { display:flex; gap:7px; }
+.variant-list { margin-top:13px; padding-top:13px; border-top:1px solid #f0e9f2; display:grid; gap:8px; }
+.variant-row,.add-variant-form { display:grid; grid-template-columns:1fr 130px auto; gap:8px; }
+.variant-row input,.add-variant-form input { border:1px solid #ded1e2; border-radius:7px; padding:8px 9px; font-size:10px; }
+.admin-product-modal { width:min(720px,92vw); }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px; }
+.form-grid label { display:grid; gap:5px; font-size:11px; font-weight:600; }
+.form-grid input,.form-grid select,.form-grid textarea { border:1px solid #ded1e2; border-radius:8px; padding:10px; font:inherit; }
+.form-grid .full-span { grid-column:1/-1; }
+.form-grid .check-label { display:flex; align-items:center; gap:8px; }
+.form-grid .check-label input { width:auto; }
+
+@media (max-width:1100px){
+ .admin-stats{grid-template-columns:repeat(4,1fr)}
+ .cart-layout,.checkout-layout{grid-template-columns:1fr}
+ .cart-summary,.checkout-summary{position:static}
+}
+@media (max-width:820px){
+ .auth-shell{grid-template-columns:1fr}.auth-brand-panel{display:none}.auth-form-panel{min-height:100vh}
+ .payment-options{grid-template-columns:1fr}
+ .admin-stats{grid-template-columns:repeat(2,1fr)}
+ .admin-product-main{grid-template-columns:65px 1fr}.admin-product-actions{grid-column:1/-1}
+ .cart-row{grid-template-columns:78px 1fr auto}.cart-row img{width:78px;height:78px}.remove-cart{grid-column:2/-1;justify-self:start}
+}
+@media (max-width:560px){
+ .auth-card{padding:24px}.admin-main{width:94%}.admin-welcome{align-items:flex-start;flex-direction:column}.admin-stats{grid-template-columns:1fr 1fr}.variant-row,.add-variant-form{grid-template-columns:1fr 90px}.variant-row button,.add-variant-form button{grid-column:1/-1}.form-grid{grid-template-columns:1fr}.form-grid .full-span{grid-column:auto}
+}
+
+
+/* =========================================================
+   TIO PERFUME COLLECTION - LOGIN PAGE
+   FINAL LOGO FIX
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   LOGIN PAGE
+   --------------------------------------------------------- */
+
+.auth-page-tio {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN LOGIN CONTAINER
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-shell {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 52% 48%;
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   LEFT PURPLE BRAND PANEL
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-brand-panel {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 70px 12% 70px 14%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 110% 100%,
+            rgba(255,255,255,0.12) 0,
+            rgba(255,255,255,0.12) 18%,
+            transparent 18.2%
+        ),
+        radial-gradient(
+            circle at 110% 100%,
+            rgba(255,255,255,0.08) 0,
+            rgba(255,255,255,0.08) 27%,
+            transparent 27.2%
+        ),
+        linear-gradient(
+            135deg,
+            #693579 0%,
+            #815091 50%,
+            #a06aae 100%
+        );
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   LEFT LOGO
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-brand-panel .auth-logo-large {
+
+    display: block !important;
+
+    width: 350px !important;
+
+    max-width: 90% !important;
+
+    height: auto !important;
+
+    max-height: 180px !important;
+
+    margin: 0 auto 40px auto !important;
+
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    filter: none !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    mix-blend-mode: normal !important;
+
+    transform: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   SMALL TOP LABEL
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-kicker {
+
+    margin: 0 0 22px 0;
+
+    color: #f4eaf6;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN HEADLINE
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-brand-panel h1 {
+
+    margin: 0 0 28px 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: clamp(58px, 5vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+
+/* ---------------------------------------------------------
+   LEFT DESCRIPTION
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-brand-panel .auth-description {
+
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #f5edf7;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT LOGIN AREA
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-form-panel {
+
+    min-height: 100vh;
+
+    padding: 60px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN CARD
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card {
+
+    width: 100%;
+
+    max-width: 670px;
+
+    padding: 48px 55px;
+
+    background: #ffffff;
+
+    border: 1px solid #eaddea;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(80, 45, 90, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT SIDE LOGO
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .auth-logo-small {
+
+    display: block;
+
+    width: 210px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    max-height: 120px;
+
+    margin: 0 auto 38px auto;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    filter: none;
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ---------------------------------------------------------
+   WELCOME BACK
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card h2 {
+
+    margin: 0 0 10px 0;
+
+    color: #713784;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 46px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN SUBTITLE
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .auth-card-sub {
+
+    margin: 0 0 35px 0;
+
+    color: #806b80;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   FORM LABEL
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card form label {
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #302032;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   INPUT
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card form input {
+
+    display: block;
+
+    width: 100%;
+
+    height: 58px;
+
+    margin-top: 10px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfd2e2;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #302032;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ---------------------------------------------------------
+   INPUT FOCUS
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card form input:focus {
+
+    border-color: #9861aa;
+
+    box-shadow:
+        0 0 0 3px rgba(152, 97, 170, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   INPUT PLACEHOLDER
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card form input::placeholder {
+
+    color: #8b7b8d;
+
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN BUTTON
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .btn-primary {
+
+    width: 100%;
+
+    height: 54px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #a875b6;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON HOVER
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .btn-primary:hover {
+
+    background: #8f5ca0;
+
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   DISABLED BUTTON
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .btn-primary:disabled {
+
+    opacity: 0.7;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* ---------------------------------------------------------
+   BOTTOM ACCOUNT TEXT
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .auth-bottom-text {
+
+    margin: 28px 0 0 0;
+
+    text-align: center;
+
+    color: #766879;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   CREATE ACCOUNT LINK
+   --------------------------------------------------------- */
+
+.auth-page-tio .auth-card .auth-bottom-text a {
+
+    color: #713784;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.auth-page-tio .auth-card .auth-bottom-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   ERROR MESSAGE
+   --------------------------------------------------------- */
+
+.auth-page-tio .modal-error {
+
+    margin: 0 0 20px 0;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    background: #fbe9ed;
+
+    color: #a42d48;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .auth-page-tio .auth-shell {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .auth-page-tio .auth-brand-panel {
+
+        min-height: auto;
+
+        padding: 60px 8%;
+
+        text-align: center;
+    }
+
+    .auth-page-tio .auth-brand-panel .auth-logo-large {
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .auth-page-tio .auth-brand-panel .auth-description {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .auth-page-tio .auth-form-panel {
+
+        min-height: auto;
+
+        padding: 50px 6%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .auth-page-tio .auth-brand-panel {
+
+        padding: 45px 25px;
+    }
+
+    .auth-page-tio .auth-brand-panel .auth-logo-large {
+
+        width: 260px !important;
+
+        max-height: 130px !important;
+
+        margin-bottom: 30px !important;
+    }
+
+    .auth-page-tio .auth-kicker {
+
+        font-size: 13px;
+
+        letter-spacing: 4px;
+    }
+
+    .auth-page-tio .auth-brand-panel h1 {
+
+        font-size: 50px;
+
+        letter-spacing: -1px;
+    }
+
+    .auth-page-tio .auth-brand-panel .auth-description {
+
+        font-size: 17px;
+    }
+
+    .auth-page-tio .auth-form-panel {
+
+        padding: 30px 18px;
+    }
+
+    .auth-page-tio .auth-card {
+
+        padding: 35px 25px;
+
+        border-radius: 20px;
+    }
+
+    .auth-page-tio .auth-card .auth-logo-small {
+
+        width: 170px;
+
+        margin-bottom: 28px;
+    }
+
+    .auth-page-tio .auth-card h2 {
+
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   TIO PERFUME COLLECTION
+   LOGIN PAGE FINAL DESIGN
+   ========================================================= */
+
+
+/* RESET */
+.auth-page-tio {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.auth-page-tio .auth-shell {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT PURPLE SIDE
+   ========================================================= */
+
+.auth-page-tio .auth-brand-panel {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 9%;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 110% 105%,
+            rgba(255,255,255,0.13) 0 16%,
+            transparent 16.2%
+        ),
+        radial-gradient(
+            circle at 110% 105%,
+            rgba(255,255,255,0.08) 0 25%,
+            transparent 25.2%
+        ),
+        radial-gradient(
+            circle at 110% 105%,
+            rgba(255,255,255,0.06) 0 35%,
+            transparent 35.2%
+        ),
+        linear-gradient(
+            145deg,
+            #693879 0%,
+            #80508f 55%,
+            #a56db0 100%
+        );
+}
+
+
+/* CONTENT WRAPPER */
+
+.auth-page-tio .brand-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   LEFT LOGO
+   ========================================================= */
+
+.auth-page-tio .auth-logo-large {
+
+    display: block;
+
+    width: 260px;
+    height: auto;
+
+    max-width: 75%;
+    max-height: 135px;
+
+    margin: 0 0 42px 0;
+
+    object-fit: contain;
+    object-position: left center;
+
+    background: transparent;
+
+    border: 0;
+    box-shadow: none;
+
+    filter: none;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   LEFT SMALL TITLE
+   ========================================================= */
+
+.auth-page-tio .auth-kicker {
+
+    margin: 0 0 20px 0;
+
+    color: #f3eaf5;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LEFT MAIN TITLE
+   ========================================================= */
+
+.auth-page-tio .auth-brand-panel h1 {
+
+    margin: 0 0 25px 0;
+
+    color: #ffffff;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: clamp(55px, 5.2vw, 76px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   LEFT DESCRIPTION
+   ========================================================= */
+
+.auth-page-tio .auth-description {
+
+    width: 100%;
+    max-width: 560px;
+
+    margin: 0;
+
+    color: #f5edf7;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RIGHT WHITE SIDE
+   ========================================================= */
+
+.auth-page-tio .auth-form-panel {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 7%;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.auth-page-tio .auth-card {
+
+    width: 100%;
+    max-width: 610px;
+
+    padding: 42px 55px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #eadfea;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 45px rgba(90, 50, 100, 0.08);
+}
+
+
+/* =========================================================
+   RIGHT LOGO
+   ========================================================= */
+
+.auth-page-tio .auth-logo-small {
+
+    display: block;
+
+    width: 175px;
+    height: auto;
+
+    max-width: 70%;
+    max-height: 95px;
+
+    margin: 0 auto 30px auto;
+
+    object-fit: contain;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    filter: none;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   WELCOME BACK
+   ========================================================= */
+
+.auth-page-tio .auth-card h2 {
+
+    margin: 0 0 8px 0;
+
+    color: #713784;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 43px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.auth-page-tio .auth-card-sub {
+
+    margin: 0 0 30px 0;
+
+    color: #7d697f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.auth-page-tio .form-group {
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.auth-page-tio .form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #302032;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.auth-page-tio .form-group input {
+
+    width: 100%;
+    height: 56px;
+
+    display: block;
+
+    padding: 0 17px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfd2e2;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #302032;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* INPUT FOCUS */
+
+.auth-page-tio .form-group input:focus {
+
+    border-color: #a06aae;
+
+    box-shadow:
+        0 0 0 3px rgba(160, 106, 174, 0.12);
+}
+
+
+/* PLACEHOLDER */
+
+.auth-page-tio .form-group input::placeholder {
+
+    color: #958499;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.auth-page-tio .login-button {
+
+    width: 100%;
+    height: 54px;
+
+    margin-top: 5px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #a875b6;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.auth-page-tio .login-button:hover {
+
+    background: #8f5c9f;
+
+    transform: translateY(-1px);
+}
+
+
+/* BUTTON DISABLED */
+
+.auth-page-tio .login-button:disabled {
+
+    opacity: .7;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT
+   ========================================================= */
+
+.auth-page-tio .auth-bottom-text {
+
+    margin: 25px 0 0 0;
+
+    text-align: center;
+
+    color: #786a79;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+}
+
+
+/* LINK */
+
+.auth-page-tio .auth-bottom-text a {
+
+    color: #713784;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.auth-page-tio .auth-bottom-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.auth-page-tio .modal-error {
+
+    margin: 0 0 20px 0;
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    background: #fbe9ed;
+
+    color: #a42d48;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .auth-page-tio .auth-shell {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .auth-page-tio .auth-brand-panel {
+
+        min-height: auto;
+
+        padding: 60px 8%;
+    }
+
+
+    .auth-page-tio .auth-logo-large {
+
+        margin-left: auto;
+        margin-right: auto;
+
+        object-position: center;
+    }
+
+
+    .auth-page-tio .brand-content {
+
+        text-align: center;
+    }
+
+
+    .auth-page-tio .auth-description {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .auth-page-tio .auth-form-panel {
+
+        min-height: auto;
+
+        padding: 45px 6%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .auth-page-tio .auth-brand-panel {
+
+        padding: 45px 25px;
+    }
+
+
+    .auth-page-tio .auth-logo-large {
+
+        width: 220px;
+
+        max-height: 115px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .auth-page-tio .auth-kicker {
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .auth-page-tio .auth-brand-panel h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .auth-page-tio .auth-description {
+
+        font-size: 16px;
+    }
+
+
+    .auth-page-tio .auth-form-panel {
+
+        padding: 25px 18px;
+    }
+
+
+    .auth-page-tio .auth-card {
+
+        padding: 35px 25px;
+
+        border-radius: 18px;
+    }
+
+
+    .auth-page-tio .auth-logo-small {
+
+        width: 150px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .auth-page-tio .auth-card h2 {
+
+        font-size: 37px;
+    }
+}
